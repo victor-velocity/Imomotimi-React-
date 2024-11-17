@@ -48,23 +48,60 @@ nav ul li a:hover {
   text-decoration: underline red;
 }
 
-.slider {
-  position: relative;
-  overflow: hidden;
+.carousel {
+  top: 0;
 }
 
 .section1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 4;
+  top: 0;
+  box-sizing: border-box;
+  height: 860px;
+}
+
+.bg1 {
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 860px;
   box-sizing: border-box;
   background-image: url(../../public/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 4;
-  top: 0;
-  box-sizing: border-box;
-  position: relative;
-  height: 830px;
+  overflow: hidden;
 }
+
+.bg2 {
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 860px;
+  box-sizing: border-box;
+  background-image: url(../../public/2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bg3 {
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 860px;
+  box-sizing: border-box;
+  background-image: url(../../public/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 
 .logo {
   animation: slide 1s ease-in-out infinite;
@@ -118,7 +155,9 @@ nav ul li a:hover {
 .angle {
   color: rgb(255, 255, 255, 0.2);
   font-size: 60px;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 120px;
 }
 
 .angle:hover {
@@ -156,7 +195,7 @@ body .section1 p {
 }
 
 .text1 {
-  margin: 70px 0px 70px 0px;
+  margin: 40px 0px 70px 0px;
 }
 
 #p1 {
@@ -202,10 +241,11 @@ body .section1 p {
 
 .mouse {
   color: white;
-  margin: 40px 0px;
+  margin: 30px auto;
   text-align: center;
   font-size: 30px;
   animation: bounce 1s linear infinite;
+  width: 60%;
 }
 
 @keyframes bounce {
@@ -594,7 +634,7 @@ footer div p {
   background-color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
   header nav,
   #button,
@@ -725,7 +765,7 @@ footer div p {
   }
 
   .form1,
-  .form2 {  
+  .form2 {
     width: auto;
     margin-right: 2px;
   }
