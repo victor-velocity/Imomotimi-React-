@@ -103,7 +103,7 @@ export default function Header() {
                     id="topwhite"
                     src="/shape-top-white-80.png"
                     className="top-white"
-                    width={1000}
+                    width={1100}
                     height={100} />
             </div></>
     )
