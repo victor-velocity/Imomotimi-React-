@@ -11,12 +11,15 @@ import ReactSwitch from "react-switch";
 import { faBars, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 
 
-
 export default function Home() {
 
   const ThemeContext = createContext(null)
 
   const [theme, setTheme] = useState("light")
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"))
+  }
 
 
   return (
