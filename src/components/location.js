@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { React } from 'react';
 
-export default function Location() {
+export default function Location({theme}) {
+    const image4 = theme === "light" ? "/shape-top-grey-80.png" : "/shape-top-dark-grey-80.png";
     return (
         <section id="section3">
             <iframe
@@ -9,7 +10,7 @@ export default function Location() {
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <Image
                 id="topgrey2"
-                src="/shape-top-grey-80.png"
+                src={image4}
                 class="overlayimage"
                 width={1000}
                 height={100} />

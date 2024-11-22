@@ -6,8 +6,9 @@ import { React } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faComputerMouse, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function Header() {
+export default function Header({theme}) {
 
+    const image1 = theme === "light" ? "/shape-top-white-80.png" : "/shape-top-black-80.png";
 
     const carouselRef = useRef(null);
 
@@ -67,7 +68,7 @@ export default function Header() {
                 </div>
                 <Image
                     id="topwhite"
-                    src="/shape-top-white-80.png"
+                    src={image1}
                     className="top-white"
                     width={1100}
                     height={100} />

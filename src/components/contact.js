@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo, faPencil, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope, faUser } from "@fortawesome/free-regular-svg-icons";
 
-export default function Contact() {
+export default function Contact({theme}) {
+    const image5 = theme === "light" ? "/shape-bottom-grey-80.png" : "/shape-bottom-dark-grey-80.png";
+
     function Submission() {
         return (alert('Submission failed. Check back later'))
     }
@@ -13,7 +15,7 @@ export default function Contact() {
         <section className="section4" id="contactlink">
             <Image
                 id="bottomgrey2"
-                src="/shape-bottom-grey-80.png"
+                src={image5}
                 className="grey-bottom"
                 width={1000}
                 height={100} />

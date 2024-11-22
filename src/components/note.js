@@ -3,12 +3,13 @@ import { React } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill1Wave, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
-export default function Note() {
+export default function Note({theme}) {
+    const image4 = theme === "light" ? "/shape-bottom-grey-80.png" : "/shape-bottom-dark-grey-80.png";
     return (
         <div id="noteslink" className="noteslink">
             <Image
                 id="bottomgrey"
-                src="/shape-bottom-grey-80.png"
+                src={image4}
                 className="grey-bottom"
                 width={1000}
                 height={100} />
