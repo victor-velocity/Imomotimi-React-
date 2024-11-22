@@ -4,22 +4,24 @@ import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import { React } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faDownload, faComputerMouse, faChevronLeft, faChevronRight, faToggleOn, faMoon, faSun, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faComputerMouse, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
-        const carouselRef = useRef(null);
-      
-        const goToPrevSlide = () => {
-          if (carouselRef.current) {
+
+
+    const carouselRef = useRef(null);
+
+    const goToPrevSlide = () => {
+        if (carouselRef.current) {
             carouselRef.current.slidePrev();
-          }
-        };
-      
-        const goToNextSlide = () => {
-          if (carouselRef.current) {
+        }
+    };
+
+    const goToNextSlide = () => {
+        if (carouselRef.current) {
             carouselRef.current.slideNext();
-          }
-        };
+        }
+    };
     return (
         <>
             <AliceCarousel autoPlay
@@ -34,42 +36,6 @@ export default function Header() {
                 <div class="bg bg3"></div>
             </AliceCarousel>
             <div className="section1">
-                <header className="sticker">
-                    <Image
-                        src="/logo.png"
-                        className="logo"
-                        alt="logo"
-                        width={60}
-                        height={60} />
-                    <nav>
-                        <ul className="lists">
-                            <li>
-                                <a href="#">intro</a>
-                            </li>
-                            <li>
-                                <a href="#countdownlink">countdown</a>
-                            </li>
-                            <li>
-                                <a href="#noteslink">notes</a>
-                            </li>
-                            <li>
-                                <a href="#contactlink">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="toggleswitch">
-                        <FontAwesomeIcon icon={faMoon} />
-                        <button className="toggle">
-                            <FontAwesomeIcon icon={faToggleOn} className="toggleon" id="toggle" />
-                        </button>
-                        <FontAwesomeIcon icon={faSun} />
-                    </div>
-                    <FontAwesomeIcon icon={faBars} id="menu" />
-                    <button id="button">
-                        <FontAwesomeIcon icon={faPhoneVolume} className="call" />
-                        <a href="#">Call us</a>
-                    </button>
-                </header>
                 <div className="angle-flex">
                     <div>
                         <FontAwesomeIcon icon={faChevronLeft} className="angle" id="prev" onClick={goToPrevSlide} />

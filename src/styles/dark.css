@@ -16,13 +16,8 @@ body {
     visibility: hidden;
 }
 
-.noteslink, .section4 {
-    background-color: #272621;
-}
 
-p5, .noted, .headlist, section ul li, #countdownlink, .section4 div div p {
-    color: white;
-}
+.noted, .headlist, section ul li, #countdownlink, .section4 div div p
 
 .overlayimage {
     position: absolute;

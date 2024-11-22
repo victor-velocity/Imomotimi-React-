@@ -9,6 +9,17 @@ html {
   position: relative;
 }
 
+#dark {
+  background-color: black;
+  color: white;
+}
+
+#light {
+  background-color: white;
+  color: black;
+}
+
+
 @font-face {
   font-family: 'Marker';
   src: url('../pages/fonts/Marker.ttf') format('truetype');
@@ -324,6 +335,10 @@ body .section1 p {
   color: #1f0e05;
 }
 
+#dark #countdownlink {
+  color: white;
+}
+
 .p4 {
   font-family: sans-serif;
   font-size: 35px;
@@ -375,6 +390,10 @@ body .section1 p {
   padding-bottom: 20px;
 }
 
+#dark .noteslink {
+  background-color: #272621;
+}
+
 .icon2 {
   font-size: 50px;
   color: red;
@@ -404,6 +423,10 @@ body .section1 p {
   margin-left: 40px;
 }
 
+#dark p5 {
+  color: white;
+}
+
 .list2 {
   display: inline-flex;
   margin-top: 0px;
@@ -416,11 +439,19 @@ body .section1 p {
   word-spacing: 9px;
 }
 
+#dark .noted {
+  color: white;
+}
+
 .headlist {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 17px;
   opacity: 100% !important;
+}
+
+#dark .headlist {
+  color: white;
 }
 
 #price,
@@ -469,11 +500,19 @@ body .section1 p {
   height: auto;
 }
 
+#dark .section4 {
+  background-color: #272621;
+}
+
 .section4 div div p {
   font-size: 18px;
   color: #1f0e05;
   opacity: 80%;
   line-height: 40px;
+}
+
+#dark .section4 div div p {
+  color: white;
 }
 
 .info {
