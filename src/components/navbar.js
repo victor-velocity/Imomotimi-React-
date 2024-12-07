@@ -1,5 +1,4 @@
-// components/NavBar.js
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
 import ReactSwitch from "react-switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +7,11 @@ import { ThemeContext } from "../pages/index"; // Adjust the path as needed
 
 const NavBar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);  // Track menu open/close state
+
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState);  // Toggle the state when hamburger is clicked
+  };
 
   return (
     <div className="sticker">
@@ -18,7 +22,7 @@ const NavBar = () => {
         width={60}
         height={60}
       />
-      <nav>
+      <nav className={menuOpen ? "nav-open" : ""}> {/* Conditionally add 'nav-open' class */}
         <ul className="lists">
           <li>
             <a href="#">Intro</a>
@@ -38,7 +42,12 @@ const NavBar = () => {
         onChange={toggleTheme}
         checked={theme === "dark"}
       />
-      <FontAwesomeIcon icon={faBars} id="menu" aria-label="Menu" />
+      <FontAwesomeIcon
+        icon={faBars}
+        id="menu"
+        aria-label="Menu"
+        onClick={toggleMenu}  // Add click handler to toggle menu
+      />
       <button id="button">
         <FontAwesomeIcon icon={faPhoneVolume} className="call" />
         <a href="#">Call us</a>

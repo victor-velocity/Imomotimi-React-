@@ -675,7 +675,6 @@ footer div p {
 
 @media (max-width: 850px) {
 
-  header nav,
   #button,
   #p1,
   .top-white,
@@ -698,6 +697,56 @@ footer div p {
     display: flex;
     width: 20px;
     flex-wrap: wrap;
+  }
+
+  .lists {
+    display: none;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 86vh;
+    position: absolute;
+    top: 14vh;
+    right: 0;
+    padding: 10px 0;
+    align-items: right;
+    animation: slidein 600ms linear forwards;
+  }
+
+  .lists li a {
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+
+  }
+
+  .lists li a:hover {
+    background-color: red !important;
+  }
+
+  @keyframes slidein {
+    from {
+      width: 0%;
+    }
+
+    to {
+      width: 40%;
+    }
+    
+  }
+
+  .lists li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-open .lists {
+    display: flex;
+  }
+
+  .nav-open {
+    background-color: red;
   }
 
   img {
