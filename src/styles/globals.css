@@ -702,14 +702,15 @@ footer div p {
   .lists {
     display: none;
     flex-direction: column;
-    gap: 70px;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    height: 86vh;
+    padding: 10px 0px;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 1);
+    height: 50vh;
+    border-bottom-left-radius: 20px;
     position: absolute;
-    top: 14vh;
+    top: 83px;
     right: 0;
-    padding: 10px 0;
     align-items: right;
     animation: slidein 600ms linear forwards;
   }
@@ -719,10 +720,6 @@ footer div p {
     color: white;
     font-size: 18px;
 
-  }
-
-  .lists li a:hover {
-    background-color: red !important;
   }
 
   @keyframes slidein {
