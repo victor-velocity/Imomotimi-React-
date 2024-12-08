@@ -15,7 +15,7 @@ export default function Countdown({theme}) {
   const [expired, setExpired] = useState(false);
 
   useEffect(() => {
-    const countDownDate = new Date("Nov 30, 2024 23:59:59").getTime(); // Corrected the date format.
+    const countDownDate = new Date("Feb 30, 2025 23:59:59").getTime(); // Corrected the date format.
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
